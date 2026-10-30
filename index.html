@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stango Immigration</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .hero {
+            background-color: #003366;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            background-image: url('path/to/hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+        }
+
+        .services {
+            padding: 1rem;
+            background-color: #fff;
+            margin: 1rem auto;
+            max-width: 90%;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #003366;
+        }
+
+        .services .service-card {
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .services .service-card:last-child {
+            border-bottom: none;
+        }
+
+        .contact-form {
+            padding: 1rem;
+            background-color: #fff;
+            margin: 1rem auto;
+            max-width: 90%;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #003366;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 0.5rem;
+            background-color: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #002244;
+        }
+
+        footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer .logo {
+            height: 50px;
+        }
+
+        .cta-button {
+            width: 100%;
+            padding: 0.5rem;
+            background-color: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #002244;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .services .service-card {
+                margin-bottom: 1rem;
+            }
+
+            .contact-form {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <img src="resources/logo.png" alt="Stango Immigration Logo" class="logo">
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Your Journey to Global Opportunities Starts Here</h1>
+            <p>Welcome to Stango Immigration, your trusted partner in international migration. We have been helping individuals and families explore international opportunities in Canada, Australia, and European countries for over 5 years.</p>
+            <button class="cta-button">Contact Us</button>
+        </section>
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Stango Immigration is a leading immigration consultancy that has been providing expert guidance and support to individuals and families seeking to explore international opportunities. With over 5 years of experience, we have helped over 500 clients successfully navigate the complexities of international migration.</p>
+            <h3>Our Story</h3>
+            <p>Our journey began when we realized the challenges and uncertainties that come with international migration. We decided to create a platform that would provide comprehensive and personalized services to help individuals and families make informed decisions about their migration journey.</p>
+            <h3>Who We Are</h3>
+            <p>At Stango Immigration, we are a team of experienced professionals dedicated to helping you achieve your international aspirations. Our team includes lawyers, immigration experts, and relocation specialists who are passionate about helping you navigate the complexities of international migration.</p>
+            <h3>Our Mission</h3>
+            <p>Our mission is to provide comprehensive and personalized services to assist you in your journey to a new home. We are committed to helping you understand your options and make informed decisions about your migration journey.</p>
+            <h3>Our Vision</h3>
+            <p>Our vision is to be the leading immigration consultancy in the world, providing expert guidance and support to individuals and families seeking to explore international opportunities.</p>
+            <h3>Why Choose Us</h3>
+            <p>At Stango Immigration, we understand that international migration can be a complex and daunting process. That's why we are committed to providing you with the guidance and support you need to make informed decisions about your migration journey. Our team of experienced professionals is dedicated to helping you navigate the complexities of international migration and achieve your international aspirations.</p>
+            <h3>Our Approach</h3>
+            <p>Our approach is simple: we provide comprehensive and personalized services to help you understand your options and make informed decisions about your migration journey. We offer a range of services, including tourist and visitor visa assistance, work visa assistance, immigration guidance, relocation support, settlement guidance, document preparation, application assistance, and travel-related consultation.</p>
+        </section>
+        <section class="stats">
+            <h2>Statistics</h2>
+            <div class="stat">
+                <h3>5+ Years of Experience</h3>
+                <p>Over 5 years of experience helping individuals and families explore international opportunities.</p>
+            </div>
+            <div class="stat">
+                <h3>500+ Sample Visa Approvals</h3>
+                <p>Over 500 clients have successfully navigated the complexities of international migration with our guidance.</p>
+            </div>
+            <div class="stat">
+                <h3>Multiple International Destinations</h3>
+                <p>We offer guidance and support for international opportunities in Canada, Australia, and European countries.</p>
+            </div>
+        </section>
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-card">
+                <h3>Tourist and Visitor Visa Assistance</h3>
+                <p>We provide expert guidance and support to help you explore international opportunities as a tourist or visitor. Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+                <p>Who it may suit: Individuals seeking to explore international opportunities as tourists or visitors.</p>
+                <p>How we can help: Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+            </div>
+            <div class="service-card">
+                <h3>Canada Open Work Permit Guidance under the IMP Program</h3>
+                <p>We provide expert guidance and support to help you explore international opportunities as a tourist or visitor. Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+                <p>Who it may suit: Individuals seeking to explore international opportunities as tourists or visitors.</p>
+                <p>How we can help: Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+            </div>
+            <div class="service-card">
+                <h3>Work Visa Assistance</h3>
+                <p>We provide expert guidance and support to help you explore international opportunities as a tourist or visitor. Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+                <p>Who it may suit: Individuals seeking to explore international opportunities as tourists or visitors.</p>
+                <p>How we can help: Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+            </div>
+            <div class="service-card">
+                <h3>Immigration Guidance</h3>
+                <p>We provide expert guidance and support to help you explore international opportunities as a tourist or visitor. Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+                <p>Who it may suit: Individuals seeking to explore international opportunities as tourists or visitors.</p>
+                <p>How we can help: Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+            </div>
+            <div class="service-card">
+                <h3>Relocation Support</h3>
+                <p>We provide expert guidance and support to help you explore international opportunities as a tourist or visitor. Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+                <p>Who it may suit: Individuals seeking to explore international opportunities as tourists or visitors.</p>
+                <p>How we can help: Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+            </div>
+            <div class="service-card">
+                <h3>Settlement Guidance</h3>
+                <p>We provide expert guidance and support to help you explore international opportunities as a tourist or visitor. Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+                <p>Who it may suit: Individuals seeking to explore international opportunities as tourists or visitors.</p>
+                <p>How we can help: Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+            </div>
+            <div class="service-card">
+                <h3>Document Preparation</h3>
+                <p>We provide expert guidance and support to help you explore international opportunities as a tourist or visitor. Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+                <p>Who it may suit: Individuals seeking to explore international opportunities as tourists or visitors.</p>
+                <p>How we can help: Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+            </div>
+            <div class="service-card">
+                <h3>Application Assistance</h3>
+                <p>We provide expert guidance and support to help you explore international opportunities as a tourist or visitor. Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+                <p>Who it may suit: Individuals seeking to explore international opportunities as tourists or visitors.</p>
+                <p>How we can help: Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+            </div>
+            <div class="service-card">
+                <h3>Travel-related Consultation</h3>
+                <p>We provide expert guidance and support to help you explore international opportunities as a tourist or visitor. Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+                <p>Who it may suit: Individuals seeking to explore international opportunities as tourists or visitors.</p>
+                <p>How we can help: Our team of experienced professionals will help you navigate the complexities of international migration and achieve your international aspirations.</p>
+            </div>
+        </section>
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <ol>
+                <li>Initial Consultation: Our team of experienced professionals will conduct a consultation to understand your migration goals and provide personalized guidance.</li>
+                <li>Document Preparation: We will help you gather and prepare all necessary documents for your migration application.</li>
+                <li>Application Submission: We will submit your migration application on your behalf and provide ongoing support and guidance throughout the process.</li>
+                <li>Follow-up: We will provide regular updates and support to ensure your migration application is processed efficiently and successfully.</li>
+            </ol>
+        </section>
+        <section class="client-support">
+            <h2>Client Support</h2>
+            <p>At Stango Immigration, we understand that international migration can be a complex and daunting process. That's why we are committed to providing you with the guidance and support you need to make informed decisions about your migration journey. Our team of experienced professionals is dedicated to helping you navigate the complexities of international migration and achieve your international aspirations.</p>
+        </section>
+        <section class="faq">
+            <h2>FAQ</h2>
+            <div class="faq-item">
+                <h3>What is the process for applying for a tourist visa?</h3>
+                <p>The process for applying for a tourist visa typically involves submitting an application, providing supporting documents, and attending an interview. Our team of experienced professionals will guide you through the entire process and help you gather all necessary documents.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the process for applying for a work visa?</h3>
+                <p>The process for applying for a work visa typically involves submitting an application, providing supporting documents, and attending an interview. Our team of experienced professionals will guide you through the entire process and help you gather all necessary documents.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the process for applying for a student visa?</h3>
+                <p>The process for applying for a student visa typically involves submitting an application, providing supporting documents, and attending an interview. Our team of experienced professionals will guide you through the entire process and help you gather all necessary documents.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the process for applying for a permanent residency visa?</h3>
+                <p>The process for applying for a permanent residency visa typically involves submitting an application, providing supporting documents, and attending an interview. Our team of experienced professionals will guide you through the entire process and help you gather all necessary documents.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the process for applying for a work permit?</h3>
+                <p>The process for applying for a work permit typically involves submitting an application, providing supporting documents, and attending an interview. Our team of experienced professionals will guide you through the entire process and help you gather all necessary documents.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the process for applying for a family visa?</h3>
+                <p>The process for applying for a family visa typically involves submitting an application, providing supporting documents, and attending an interview. Our team of experienced professionals will guide you through the entire process and help you gather all necessary documents.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the process for applying for a refugee visa?</h3>
+                <p>The process for applying for a refugee visa typically involves submitting an application, providing supporting documents, and attending an interview. Our team of experienced professionals will guide you through the entire process and help you gather all necessary documents.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the process for applying for a humanitarian visa?</h3>
+                <p>The process for applying for a humanitarian visa typically involves submitting an application, providing supporting documents, and attending an interview. Our team of experienced professionals will guide you through the entire process and help you gather all necessary documents.</p>
+            </div>
+        </section>
+        <section class="cta">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for any inquiries or questions. We are here to help you achieve your international aspirations.</p>
+            <button class="cta-button">Contact Us</button>
+        </section>
+    </main>
+    <footer>
+        <img src="resources/logo.png" alt="Stango Immigration Logo" class="logo">
+        <p>&copy; 2023 Stango Immigration. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for your submission!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
