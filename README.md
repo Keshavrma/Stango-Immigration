@@ -1,87 +1,62 @@
 # Stango Immigration
 
-Stango Immigration is a modern and user-friendly website designed to help individuals and families navigate the complexities of immigration processes. This project is built using HTML, CSS, and JavaScript, and it includes a clean and professional design theme.
+**Stango Immigration** is a modern, responsive, and minimalist website designed to help individuals and families navigate international migration processes with clarity and confidence. The project is built using modern HTML5, clean CSS3 (design system with custom properties and responsive grid/flexbox), and vanilla JavaScript.
 
-## Project Overview
+## Highlights & Features
 
-Stango Immigration provides a comprehensive platform for users to access information, resources, and services related to immigration. The website includes pages for about us, contact, services, and more.
+- **Modern Minimalist Homepage**: Focused on brand clarity with the organization name **Stango Immigration** and a prominent, high-conversion Contact & Assessment Form.
+- **Comprehensive Form Fields**:
+  - Full Name
+  - Phone Number
+  - Age (numeric validation)
+  - States & Union Territories (complete alphabetical dropdown of Indian states, UTs, and international options)
+  - Email Address
+  - Visa / Service Interest Category
+  - Notes & Questions
+- **Responsive & Accessible**: Optimized for desktops, tablets, and mobile smartphones with a collapsible mobile navigation drawer.
+- **Streamlined Content**: Pared down unnecessary walls of text across all pages to highlight only essential information.
+- **Polished Visual Design**: Premium navy and royal blue palette, subtle gradients, elegant cards, SVG vector logo branding, and smooth feedback alerts upon submission.
 
 ## Folder Structure
 
 ```
 Stango Immigration/
-├── index.html
-├── about.html
-├── services.html
-├── contact.html
+├── index.html                  # Main homepage with hero and eligibility assessment form
+├── about.html                  # About Us, company story, and core values
+├── services.html               # Streamlined overview of immigration services
+├── contact.html                # Dedicated contact page and direct inquiry form
 ├── css/
-│   └── styles.css
+│   └── styles.css              # Unified modern CSS design system and media queries
 ├── js/
-│   └── script.js
+│   └── script.js               # Form validation, feedback alerts, and mobile menu toggle
 └── resources/
+    ├── logo.svg                # Crisp vector SVG brand logo (light background)
+    ├── logo-white.svg          # Crisp vector SVG brand logo (dark background)
     └── Stango Immigration Logo.png
 ```
 
 ## Technologies Used
 
-- **HTML**: For structuring the content of the website.
-- **CSS**: For styling and layout.
-- **JavaScript**: For adding interactivity and functionality.
+- **HTML5**: Semantic document structuring with accessible form controls and metadata.
+- **CSS3**: Modern CSS variables, flexbox, CSS grid, backdrop filters, and mobile-first responsive breakpoints.
+- **JavaScript (ES6+)**: Interactive client-side validation, asynchronous submission simulation, and mobile menu interactions.
 
-## Website Pages
+## Instructions to Run Locally
 
-- **index.html**: The main page of the website.
-- **about.html**: Information about the organization and its mission.
-- **contact.html**: Contact information and a form for users to get in touch.
-- **services.html**: Details about the services offered by Stango Immigration.
+You can open the HTML files directly in any web browser, or launch a lightweight local server:
 
-## Features
+1. **Direct File Access**:
+   Double click `index.html` or open it with your browser of choice (Chrome, Edge, Firefox, Safari).
 
-- **Responsive Design**: The website is designed to be responsive and works well on various devices.
-- **User-Friendly Interface**: The design is clean and intuitive, making it easy for users to navigate.
-- **Contact Form**: A form for users to submit inquiries or feedback.
-
-## Design Theme
-
-The design theme of Stango Immigration is modern and professional, with a focus on clarity and ease of use. The color scheme and layout are designed to provide a positive user experience.
-
-## Resources
-
-The project includes a logo and other resources in the `resources` folder.
-
-- **Stango Immigration Logo.png**: The logo of the organization.
-
-## Instructions to Run the Website Locally
-
-1. **Clone the Repository**:
+2. **Using a Local Server (Recommended)**:
    ```bash
-   git clone https://github.com/Keshavrma/Stango-Immigration.git
+   # Using Python
+   python -m http.server 8080
+
+   # Or using npx
+   npx serve .
    ```
-
-2. **Navigate to the Project Directory**:
-   ```bash
-   cd Stango-Immigration
-   ```
-
-3. **Open the HTML Files**:
-   - You can open the HTML files directly in a web browser to view the website.
-   - For example, to view the main page, open `index.html` in your browser.
-
-4. **Run a Local Server (Optional)**:
-   - If you want to run a local server, you can use a tool like `http-server` or `live-server`.
-   - Install `http-server` globally:
-     ```bash
-     npm install -g http-server
-     ```
-   - Navigate to the project directory and run:
-     ```bash
-     http-server
-     ```
-   - Open your browser and go to `http://localhost:8080` to view the website.
-
-## Contributing
-
-Contributions to this project are welcome. If you have any suggestions or bug reports, please open an issue on the GitHub repository.
+   Then navigate to `http://localhost:8080` in your web browser.
 
 ## License
 

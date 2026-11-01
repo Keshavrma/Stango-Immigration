@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" width="100%" height="100%">
+  <defs>
+    <linearGradient id="brandGradWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <linearGradient id="accentGradWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon Group -->
+  <g transform="translate(10, 10)">
+    <!-- Globe Circle -->
+    <circle cx="30" cy="30" r="28" fill="none" stroke="url(#brandGradWhite)" stroke-width="2.5" />
+    <ellipse cx="30" cy="30" rx="14" ry="27.5" fill="none" stroke="url(#brandGradWhite)" stroke-width="1.5" stroke-dasharray="2 1" opacity="0.8" />
+    <line x1="2" y1="30" x2="58" y2="30" stroke="url(#brandGradWhite)" stroke-width="1.5" opacity="0.8" />
+    <line x1="8" y1="18" x2="52" y2="18" stroke="url(#brandGradWhite)" stroke-width="1.2" opacity="0.6" />
+    <line x1="8" y1="42" x2="52" y2="42" stroke="url(#brandGradWhite)" stroke-width="1.2" opacity="0.6" />
+    
+    <!-- Flight Arc -->
+    <path d="M 8,46 Q 30,12 56,14" fill="none" stroke="url(#accentGradWhite)" stroke-width="2.5" stroke-linecap="round" />
+    <!-- Airplane Symbol -->
+    <polygon points="56,14 47,12 50,18" fill="#fbbf24" />
+  </g>
+  
+  <!-- Text Brand -->
+  <g transform="translate(82, 42)">
+    <text font-family="'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="28" fill="#ffffff" letter-spacing="-0.5">STRANGO</text>
+    <text x="0" y="22" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="12" fill="#38bdf8" letter-spacing="4">IMMIGRATION</text>
+  </g>
+</svg>
