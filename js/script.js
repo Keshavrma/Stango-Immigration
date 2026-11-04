@@ -98,9 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         contactForm.reset();
 
-        if (typeof fbq === 'function') {
-          fbq('track', 'Lead');
-        }
 
         if (submitBtn) {
           submitBtn.disabled = false;
