@@ -1,10 +1,11 @@
-# Stango Immigration
+# Stango Immigration & Stango Clothing
 
 **Stango Immigration** is a modern, responsive, and minimalist website designed to help individuals and families navigate international migration processes with clarity and confidence. The project is built using modern HTML5, clean CSS3 (design system with custom properties and responsive grid/flexbox), and vanilla JavaScript.
 
 ## Highlights & Features
 
 - **Modern Minimalist Homepage**: Focused on brand clarity with the organization name **Stango Immigration** and a prominent, high-conversion Contact & Assessment Form.
+- **Stango Clothing E-Commerce Store**: Introducing an official apparel & travel gear store (`shop.html`) with interactive cart drawer, local storage persistence, category filters, instant search, size pickers, and checkout demo.
 - **Comprehensive Form Fields**:
   - Full Name
   - Phone Number
@@ -22,13 +23,15 @@
 ```
 Stango Immigration/
 ├── index.html                  # Main homepage with hero and eligibility assessment form
+├── shop.html                   # Stango Clothing official e-commerce apparel store
 ├── about.html                  # About Us, company story, and core values
 ├── services.html               # Streamlined overview of immigration services
 ├── contact.html                # Dedicated contact page and direct inquiry form
 ├── css/
-│   └── styles.css              # Unified modern CSS design system and media queries
+│   └── styles.css              # Unified modern CSS design system and shop styling
 ├── js/
-│   └── script.js               # Form validation, feedback alerts, and mobile menu toggle
+│   ├── script.js               # Form validation, feedback alerts, and cart sync
+│   └── shop.js                 # Stango Clothing store catalog, cart engine & checkout
 └── resources/
     ├── logo.svg                # Crisp vector SVG brand logo (light background)
     ├── logo-white.svg          # Crisp vector SVG brand logo (dark background)
@@ -39,14 +42,14 @@ Stango Immigration/
 
 - **HTML5**: Semantic document structuring with accessible form controls and metadata.
 - **CSS3**: Modern CSS variables, flexbox, CSS grid, backdrop filters, and mobile-first responsive breakpoints.
-- **JavaScript (ES6+)**: Interactive client-side validation, asynchronous submission simulation, and mobile menu interactions.
+- **JavaScript (ES6+)**: Interactive client-side validation, e-commerce cart engine with `localStorage`, and mobile menu interactions.
 
 ## Instructions to Run Locally
 
 You can open the HTML files directly in any web browser, or launch a lightweight local server:
 
 1. **Direct File Access**:
-   Double click `index.html` or open it with your browser of choice (Chrome, Edge, Firefox, Safari).
+   Double click `index.html` or `shop.html` or open it with your browser of choice (Chrome, Edge, Firefox, Safari).
 
 2. **Using a Local Server (Recommended)**:
    ```bash

@@ -1,5 +1,5 @@
 /**
- * STANGO IMMIGRATION - INTERACTIVE SCRIPT
+ * STANGO IMMIGRATION & CLOTHING - MAIN INTERACTIVE SCRIPT
  */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 2. Form Handling
+  // 2. Assessment / Contact Form Handling
   const contactForm = document.getElementById('contactForm');
   const formAlert = document.getElementById('formAlert');
 
@@ -98,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         contactForm.reset();
 
-
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalBtnHTML;
@@ -106,4 +105,22 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 700);
     });
   }
+
+  // 3. Sync Store Cart Count across all pages
+  function syncNavCartCount() {
+    try {
+      const stored = localStorage.getItem('stango_clothing_cart');
+      if (stored) {
+        const items = JSON.parse(stored);
+        const total = items.reduce((sum, item) => sum + (item.quantity || 1), 0);
+        document.querySelectorAll('.cart-count-pill').forEach(pill => {
+          pill.textContent = total;
+        });
+      }
+    } catch (e) {
+      console.error('Cart sync error:', e);
+    }
+  }
+
+  syncNavCartCount();
 });
