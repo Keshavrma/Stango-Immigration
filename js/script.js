@@ -14,6 +14,14 @@ document.addEventListener('DOMContentLoaded', function () {
       mobileToggle.setAttribute('aria-expanded', isOpen);
     });
 
+    // Close when clicking nav links on mobile
+    navMenu.querySelectorAll('.nav-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navMenu.classList.remove('open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
     // Close when clicking outside
     document.addEventListener('click', function (e) {
       if (!mobileToggle.contains(e.target) && !navMenu.contains(e.target)) {

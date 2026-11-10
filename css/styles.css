@@ -1707,7 +1707,7 @@ a {
 }
 
 /* ==========================================================================
-   RESPONSIVE MEDIA QUERIES
+   RESPONSIVE MEDIA QUERIES & MOBILE PROPORTION OPTIMIZATIONS
    ========================================================================== */
 @media (max-width: 1024px) {
   .services-grid-modern {
@@ -1726,82 +1726,424 @@ a {
 }
 
 @media (max-width: 768px) {
+  /* Header & Navigation */
+  .site-header {
+    position: sticky;
+    top: 0;
+  }
+
+  .header-container {
+    padding: 0.65rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .brand-logo-img {
+    height: 38px;
+  }
+
+  .brand-title {
+    font-size: 1.05rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
+  }
+
+  .header-actions {
+    gap: 0.5rem;
+  }
+
+  .btn-cart-nav {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .btn-nav-cta {
+    display: none; /* Hide heavy CTA on compact nav to avoid squishing; accessible in mobile menu */
+  }
+
   .mobile-toggle {
     display: flex;
+    padding: 0.4rem;
   }
 
   .nav-menu {
     position: fixed;
-    top: 68px;
+    top: 60px;
     left: 0;
     width: 100%;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
     background: #ffffff;
     flex-direction: column;
-    padding: 1.5rem;
-    gap: 1rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    align-items: stretch;
+    padding: 1.25rem 1.5rem 2rem;
+    gap: 0.25rem;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid var(--border-light);
     transform: translateY(-150%);
-    transition: transform 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+    z-index: 999;
   }
 
   .nav-menu.open {
     transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
-  .trust-container {
-    grid-template-columns: repeat(2, 1fr);
+  .nav-menu li {
+    width: 100%;
   }
 
-  .shop-perks-container {
-    grid-template-columns: repeat(2, 1fr);
+  .nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 0.5rem;
+    font-size: 1.05rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  .nav-link.active {
+    background-color: var(--blue-light);
+    border-radius: var(--radius-sm);
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  /* Homepage Hero Section */
+  .hero-homepage {
+    padding: 2.25rem 1rem 3rem;
+  }
+
+  .hero-pill-badge {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.8rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-org-title {
+    font-size: 2.1rem;
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-org-subtitle {
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin-bottom: 1.75rem;
+    padding: 0 0.5rem;
+  }
+
+  /* Assessment / Contact Form Card */
+  .contact-card-wrapper {
+    width: 100%;
+  }
+
+  .modern-form-card {
+    padding: 1.4rem 1.15rem;
+    border-radius: var(--radius-md);
+  }
+
+  .form-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+  }
+
+  .form-header-title {
+    font-size: 1.25rem;
   }
 
   .form-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
   }
 
   .form-group.col-span-2 {
     grid-column: span 1;
   }
 
-  .modern-form-card {
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 16px; /* Prevents auto-zoom on iOS safari */
+    padding: 0.7rem 0.85rem 0.7rem 2.6rem;
+  }
+
+  .form-textarea {
+    padding-left: 0.85rem;
+    min-height: 80px;
+  }
+
+  .btn-submit-form {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.98rem;
+  }
+
+  /* Trust Highlights Strip */
+  .trust-strip {
+    padding: 1.75rem 1rem;
+  }
+
+  .trust-container {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .trust-item {
+    gap: 0.85rem;
+  }
+
+  /* Services Section */
+  .services-section {
+    padding: 3rem 1rem;
+  }
+
+  .section-header-compact {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-desc {
+    font-size: 0.92rem;
+  }
+
+  .services-grid-modern {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .service-card-modern {
     padding: 1.5rem 1.25rem;
+  }
+
+  /* Destinations */
+  .destinations-strip {
+    padding: 2.75rem 1rem;
+  }
+
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+
+  .dest-card {
+    padding: 1.15rem 0.75rem;
+  }
+
+  .dest-flag {
+    font-size: 1.8rem;
+  }
+
+  .dest-name {
+    font-size: 1rem;
+  }
+
+  /* Secondary Page Heroes */
+  .page-hero {
+    padding: 2.25rem 1rem 2rem;
+  }
+
+  .page-hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .page-hero p {
+    font-size: 0.92rem;
+  }
+
+  .content-section {
+    padding: 2rem 1rem;
+  }
+
+  .content-card {
+    padding: 1.4rem 1.15rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .content-card h2 {
+    font-size: 1.3rem;
   }
 
   .about-features-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Shop / Clothing Store Elements */
+  .shop-hero {
+    padding: 2.25rem 1rem 2rem;
   }
 
   .shop-hero-title {
-    font-size: 2.2rem;
+    font-size: 1.9rem;
+    line-height: 1.2;
   }
 
+  .shop-hero-subtitle {
+    font-size: 0.94rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .shop-perks-strip {
+    padding: 1.25rem 1rem;
+  }
+
+  .shop-perks-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .shop-section {
+    padding: 2rem 1rem 3.5rem;
+  }
+
+  .shop-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+    padding: 0.85rem;
+  }
+
+  .shop-categories {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.35rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .shop-categories::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-filter-btn {
+    flex-shrink: 0;
+    font-size: 0.82rem;
+    padding: 0.35rem 0.8rem;
+  }
+
+  .shop-toolbar-controls {
+    flex-direction: column;
+    gap: 0.65rem;
+    width: 100%;
+  }
+
+  .shop-search-wrap,
+  .shop-sort-select {
+    width: 100%;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .product-media {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Slide-Over Cart Drawer */
   .cart-drawer {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .cart-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .cart-body {
+    padding: 1rem 1.25rem;
+  }
+
+  .cart-footer {
+    padding: 1rem 1.25rem;
+  }
+
+  /* Checkout Modal */
+  .checkout-modal {
+    padding: 0.75rem;
+    align-items: flex-end; /* Mobile bottom sheet style */
+  }
+
+  .checkout-card {
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  .checkout-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .checkout-body {
+    padding: 1.25rem;
+  }
+
+  .checkout-body .form-input,
+  .checkout-body select {
+    font-size: 16px; /* Prevent iOS zoom */
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 2.5rem 1rem 1.5rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .footer-desc {
     max-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    padding-top: 1.5rem;
   }
 }
 
-@media (max-width: 640px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
-  .services-grid-modern {
-    grid-template-columns: 1fr;
-  }
-  .trust-container {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 420px) {
   .destinations-grid {
     grid-template-columns: 1fr;
   }
-  .shop-perks-container {
-    grid-template-columns: 1fr;
+
+  .brand-title {
+    font-size: 0.95rem;
   }
-  .footer-top {
-    grid-template-columns: 1fr;
+
+  .brand-logo-img {
+    height: 34px;
   }
-  .hero-homepage {
-    padding: 2.5rem 1rem 3.5rem;
+
+  .hero-org-title {
+    font-size: 1.85rem;
+  }
+
+  .product-price {
+    font-size: 1.35rem;
   }
 }
