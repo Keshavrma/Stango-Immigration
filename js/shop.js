@@ -1,5 +1,5 @@
 /**
- * STANGO CLOTHING - MEME HOODIE STORE ENGINE
+ * STANGO CLOTHING - MEME HOODIE STORE ENGINE (H&M AESTHETIC)
  * 5 Exclusive Meme Graphic Hoodies @ ₹799 Each
  * Free Delivery All Over India on Orders Above ₹999
  */
@@ -7,7 +7,7 @@
 const STANGO_PRODUCTS = [
   {
     id: 'hoodie-sussy-kal-ji',
-    name: 'Sussy Kal Ji Meme Graphic Hoodie',
+    name: 'Sussy Kal Ji Relaxed Fit Hoodie',
     color: 'Washed Black',
     category: 'black',
     categoryLabel: 'Black Edition',
@@ -15,15 +15,15 @@ const STANGO_PRODUCTS = [
     originalPrice: 1499,
     rating: 4.9,
     reviewsCount: 184,
-    badge: 'Best Seller',
+    badge: 'Trending',
     badgeClass: 'gold',
     image: 'resources/hoodies/hoodie-1-sussy-kal-ji.jpg',
-    description: 'Heavyweight 380 GSM fleece hoodie featuring the iconic "Sussy Kal Ji 👅" meme print. Ultra-soft brushed interior with double-lined hood.',
+    description: 'Heavyweight 380 GSM fleece hoodie featuring the viral "Sussy Kal Ji 👅" graphic. Relaxed unisex fit with double-lined hood.',
     sizes: ['S', 'M', 'L', 'XL', 'XXL']
   },
   {
     id: 'hoodie-olive-flex',
-    name: 'Desi Sigma Flex Graphic Hoodie',
+    name: 'Desi Sigma Flex Relaxed Fit Hoodie',
     color: 'Military Olive Green',
     category: 'olive',
     categoryLabel: 'Olive Edition',
@@ -31,15 +31,15 @@ const STANGO_PRODUCTS = [
     originalPrice: 1499,
     rating: 4.8,
     reviewsCount: 142,
-    badge: 'Trending',
+    badge: 'New Arrival',
     badgeClass: 'green',
     image: 'resources/hoodies/hoodie-2-olive-flex.jpg',
-    description: 'Earthy olive pullover hoodie with the viral desi flex meme graphic. Pre-shrunk breathable cotton with snug ribbed cuffs and hem.',
+    description: 'Earthy olive pullover hoodie with the viral desi flex meme print. Pre-shrunk breathable cotton with snug ribbed cuffs.',
     sizes: ['S', 'M', 'L', 'XL', 'XXL']
   },
   {
     id: 'hoodie-maroon-shoe',
-    name: 'Shoe On Head Meme Graphic Hoodie',
+    name: 'Shoe On Head Relaxed Fit Hoodie',
     color: 'Burgundy Maroon',
     category: 'maroon',
     categoryLabel: 'Maroon Edition',
@@ -47,15 +47,15 @@ const STANGO_PRODUCTS = [
     originalPrice: 1499,
     rating: 4.9,
     reviewsCount: 97,
-    badge: 'Viral Edition',
+    badge: 'Popular',
     badgeClass: 'gold',
     image: 'resources/hoodies/hoodie-3-maroon-shoe.jpg',
-    description: 'Deep maroon hoodie with crisp digital print of the legendary shoe-on-head mood meme. High-density print that won\'t fade or peel.',
+    description: 'Deep maroon hoodie with crisp digital print of the shoe-on-head mood meme. High-density anti-fade screen print.',
     sizes: ['S', 'M', 'L', 'XL', 'XXL']
   },
   {
     id: 'hoodie-blue-pose',
-    name: 'Deep Thinker Meme Graphic Hoodie',
+    name: 'Deep Thinker Relaxed Fit Hoodie',
     color: 'Cobalt Royal Blue',
     category: 'blue',
     categoryLabel: 'Blue Edition',
@@ -63,15 +63,15 @@ const STANGO_PRODUCTS = [
     originalPrice: 1499,
     rating: 4.8,
     reviewsCount: 115,
-    badge: 'Top Pick',
+    badge: 'Featured',
     badgeClass: 'blue',
     image: 'resources/hoodies/hoodie-4-blue-pose.jpg',
-    description: 'Striking royal blue fleece hoodie with signature hands-on-feet contemplative meme artwork. Spacious kangaroo pocket and matching drawstrings.',
+    description: 'Vibrant cobalt blue fleece hoodie with hands-on-feet contemplative artwork. Spacious kangaroo pocket and matching drawstrings.',
     sizes: ['S', 'M', 'L', 'XL', 'XXL']
   },
   {
     id: 'hoodie-purple-kissie',
-    name: 'Kissie Kardunga Meme Graphic Hoodie',
+    name: 'Kissie Kardunga Relaxed Fit Hoodie',
     color: 'Royal Purple',
     category: 'purple',
     categoryLabel: 'Purple Edition',
@@ -79,10 +79,10 @@ const STANGO_PRODUCTS = [
     originalPrice: 1499,
     rating: 5.0,
     reviewsCount: 210,
-    badge: 'Fan Favorite',
+    badge: 'Bestseller',
     badgeClass: 'gold',
     image: 'resources/hoodies/hoodie-5-purple-kissie.jpg',
-    description: 'Vibrant royal purple street hoodie featuring the viral "kissie kardunga" artwork. Relaxed unisex fit engineered for maximum cozy comfort.',
+    description: 'Vibrant royal purple streetwear hoodie featuring the viral "kissie kardunga" artwork. Premium 380 GSM brushed fleece.',
     sizes: ['S', 'M', 'L', 'XL', 'XXL']
   }
 ];
@@ -96,6 +96,7 @@ class StangoCart {
     this.items = this.loadCart();
     this.selectedSizes = {};
     this.activeCategory = 'all';
+    this.searchQuery = '';
     this.sortBy = 'featured';
   }
 
@@ -139,7 +140,7 @@ class StangoCart {
     }
 
     this.saveCart();
-    this.showToast(`Added "${product.name} (${chosenSize})" to your bag!`);
+    this.showToast(`Added "${product.name} (${chosenSize})" to bag`);
     this.openDrawer();
   }
 
@@ -183,7 +184,7 @@ class StangoCart {
     }
 
     toast.innerHTML = `
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F4C75" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
       <span>${message}</span>
@@ -194,7 +195,7 @@ class StangoCart {
     clearTimeout(this.toastTimeout);
     this.toastTimeout = setTimeout(() => {
       toast.classList.remove('show');
-    }, 3500);
+    }, 3200);
   }
 
   openDrawer() {
@@ -239,7 +240,7 @@ class StangoCart {
         const percent = Math.min(100, (subtotal / FREE_DELIVERY_THRESHOLD) * 100);
         const remaining = FREE_DELIVERY_THRESHOLD - subtotal;
         shippingBarFill.style.width = `${percent}%`;
-        shippingBarMsg.innerHTML = `Add <strong>₹${remaining}</strong> more for <strong>FREE Delivery all over India</strong>! 🚚`;
+        shippingBarMsg.innerHTML = `Add <strong>₹${remaining}</strong> more for <strong>FREE Delivery</strong>! 🚚`;
       }
     }
 
@@ -247,14 +248,14 @@ class StangoCart {
       if (this.items.length === 0) {
         cartBody.innerHTML = `
           <div class="cart-empty-state">
-            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#3282B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <path d="M16 10a4 4 0 0 1-8 0"></path>
             </svg>
-            <h3 style="font-size:1.15rem; color:var(--text-primary); margin-bottom:0.35rem; font-family:var(--font-heading);">Your Bag is Empty</h3>
-            <p style="font-size:0.88rem; max-width:260px; margin:0 auto 1.5rem; color:var(--text-muted);">Pick your favorite viral meme hoodie @ ₹799 each. Free delivery on ₹999+!</p>
-            <button class="btn-submit-form" onclick="stangoCart.closeDrawer()" style="padding:0.6rem 1.25rem; font-size:0.88rem;">Shop Hoodies Now</button>
+            <h3 style="font-size:1.05rem; color:var(--text-primary); margin-bottom:0.25rem; font-family:var(--font-heading);">Your Bag is Empty</h3>
+            <p style="font-size:0.82rem; max-width:240px; margin:0 auto 1.25rem; color:var(--text-muted);">Pick any viral meme hoodie @ ₹799 each. Free delivery on orders over ₹999.</p>
+            <button class="btn-hm-add" onclick="stangoCart.closeDrawer()" style="max-width:180px; margin:0 auto;">Start Shopping</button>
           </div>
         `;
         if (cartFooter) cartFooter.style.display = 'none';
@@ -270,7 +271,7 @@ class StangoCart {
                   <span class="cart-item-size">Size: <strong>${item.size}</strong> • ${item.color || ''}</span>
                 </div>
                 <button class="cart-item-remove" onclick="stangoCart.removeItem('${item.id}', '${item.size}')" title="Remove item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                   </svg>
@@ -296,7 +297,7 @@ class StangoCart {
         const shippingFee = subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : STANDARD_SHIPPING_FEE;
         if (shippingFeeEl) {
           shippingFeeEl.textContent = shippingFee === 0 ? 'FREE' : `₹${shippingFee}`;
-          if (shippingFee === 0) shippingFeeEl.style.color = '#16a34a';
+          if (shippingFee === 0) shippingFeeEl.style.color = '#4f5d4b';
           else shippingFeeEl.style.color = 'var(--text-primary)';
         }
         if (totalEl) totalEl.textContent = `₹${subtotal + shippingFee}`;
@@ -306,10 +307,17 @@ class StangoCart {
 
   renderProducts() {
     const grid = document.getElementById('productsGrid');
+    const countLabel = document.getElementById('productCountLabel');
     if (!grid) return;
 
     let filtered = STANGO_PRODUCTS.filter(p => {
-      return this.activeCategory === 'all' || p.category === this.activeCategory;
+      const matchCat = this.activeCategory === 'all' || p.category === this.activeCategory;
+      const query = this.searchQuery.trim().toLowerCase();
+      const matchQuery = !query || 
+        p.name.toLowerCase().includes(query) || 
+        p.color.toLowerCase().includes(query) ||
+        p.description.toLowerCase().includes(query);
+      return matchCat && matchQuery;
     });
 
     if (this.sortBy === 'price-low') {
@@ -318,6 +326,21 @@ class StangoCart {
       filtered.sort((a, b) => b.price - a.price);
     } else if (this.sortBy === 'rating') {
       filtered.sort((a, b) => b.rating - a.rating);
+    }
+
+    if (countLabel) {
+      countLabel.textContent = `(${filtered.length} item${filtered.length === 1 ? '' : 's'})`;
+    }
+
+    if (filtered.length === 0) {
+      grid.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align:center; padding:3rem 1rem; background:#fff; border-radius:var(--radius-md); border:1px solid var(--border-light);">
+          <h3 style="font-size:1.1rem; color:var(--text-primary); margin-bottom:0.4rem;">No matching hoodies found</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Try clearing your search query or choosing another color category.</p>
+          <button class="hm-chip active" onclick="stangoCart.resetFilters()">View All Hoodies</button>
+        </div>
+      `;
+      return;
     }
 
     grid.innerHTML = filtered.map(p => {
@@ -329,40 +352,30 @@ class StangoCart {
             <img src="${p.image}" alt="${p.name}" class="product-img" loading="lazy">
           </div>
           <div class="product-content">
-            <span class="product-category-label">${p.color}</span>
+            <span class="product-color-meta">${p.color}</span>
             <h3 class="product-title">${p.name}</h3>
-            <p class="product-desc-snippet">${p.description}</p>
             
-            <div class="product-rating">
-              <span class="stars">★★★★★</span>
-              <span>${p.rating} (${p.reviewsCount} reviews)</span>
-            </div>
-
             <div class="product-price-row">
               <span class="product-price">₹${p.price}</span>
               <span class="product-original-price">₹${p.originalPrice}</span>
               <span class="product-discount-pill">47% OFF</span>
             </div>
             
-            <div class="product-sizes">
-              <span class="size-label">Select Size:</span>
-              <div class="size-options">
-                ${p.sizes.map(s => `
-                  <button type="button" class="size-pill ${s === selectedSize ? 'active' : ''}" 
-                    onclick="stangoCart.selectSize('${p.id}', '${s}')">
-                    ${s}
-                  </button>
-                `).join('')}
-              </div>
+            <div class="product-sizes-compact">
+              ${p.sizes.map(s => `
+                <button type="button" class="size-pill-mini ${s === selectedSize ? 'active' : ''}" 
+                  onclick="stangoCart.selectSize('${p.id}', '${s}')" title="Size ${s}">
+                  ${s}
+                </button>
+              `).join('')}
             </div>
 
-            <button type="button" class="btn-add-cart" onclick="stangoCart.addItem('${p.id}')">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="9" cy="21" r="1"></circle>
-                <circle cx="20" cy="21" r="1"></circle>
-                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            <button type="button" class="btn-hm-add" onclick="stangoCart.addItem('${p.id}')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
               </svg>
-              Add to Bag • ₹${p.price}
+              <span>Add to Bag</span>
             </button>
           </div>
         </article>
@@ -370,26 +383,46 @@ class StangoCart {
     }).join('');
   }
 
+  resetFilters() {
+    this.activeCategory = 'all';
+    this.searchQuery = '';
+    const searchInput = document.getElementById('shopSearchInput');
+    if (searchInput) searchInput.value = '';
+    document.querySelectorAll('.hm-chip').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-category') === 'all');
+    });
+    this.renderProducts();
+  }
+
   selectSize(productId, size) {
     this.selectedSizes[productId] = size;
     const card = document.querySelector(`.product-card[data-id="${productId}"]`);
     if (card) {
-      card.querySelectorAll('.size-pill').forEach(btn => {
+      card.querySelectorAll('.size-pill-mini').forEach(btn => {
         btn.classList.toggle('active', btn.textContent.trim() === size);
       });
     }
   }
 
   initEventListeners() {
-    // Category tabs
-    document.querySelectorAll('.category-filter-btn').forEach(btn => {
+    // H&M style filter chips
+    document.querySelectorAll('.hm-chip').forEach(btn => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('.category-filter-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.hm-chip').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         this.activeCategory = btn.getAttribute('data-category');
         this.renderProducts();
       });
     });
+
+    // Live search input
+    const searchInput = document.getElementById('shopSearchInput');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        this.searchQuery = e.target.value;
+        this.renderProducts();
+      });
+    }
 
     // Sort select
     const sortSelect = document.getElementById('shopSortSelect');

@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       // UI Feedback - Button state
-      const originalBtnHTML = submitBtn ? submitBtn.innerHTML : 'Submit';
+      const originalBtnHTML = submitBtn ? submitBtn.innerHTML : 'Submit form';
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.innerHTML = `
@@ -78,12 +78,26 @@ document.addEventListener('DOMContentLoaded', function () {
             <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
             <path d="M4 12a8 8 0 018-8v8H4z" fill="currentColor"></path>
           </svg>
-          Processing...
+          Submitting...
         `;
       }
 
-      // Simulate network request
-      setTimeout(() => {
+      // Submit via FormSubmit.co endpoint using AJAX
+      const formData = new FormData(contactForm);
+      const actionUrl = contactForm.getAttribute('action') || 'https://formsubmit.co/ajax/stango.marketing@gmail.com';
+      const endpoint = actionUrl.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+
+      fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
         const userName = nameInput ? nameInput.value.trim() : 'Applicant';
         const userState = stateInput ? stateInput.options[stateInput.selectedIndex].text : '';
 
@@ -105,12 +119,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         contactForm.reset();
-
+      })
+      .catch(function (error) {
+        console.error('FormSubmit error:', error);
+        // Fallback standard submit if fetch fails or blocked
+        contactForm.submit();
+      })
+      .finally(function () {
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalBtnHTML;
         }
-      }, 700);
+      });
     });
   }
 
