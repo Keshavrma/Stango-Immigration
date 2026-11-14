@@ -152,3 +152,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   syncNavCartCount();
 });
+
+// Toggle Optional Notes field on homepage assessment form
+function toggleNotesField() {
+  const c = document.getElementById('notesContainer');
+  const b = document.getElementById('notesToggleBtn');
+  if (c) {
+    c.style.display = 'block';
+    if (b) b.style.display = 'none';
+    const ta = c.querySelector('textarea');
+    if (ta) ta.focus();
+  }
+}
+window.toggleNotesField = toggleNotesField;
+

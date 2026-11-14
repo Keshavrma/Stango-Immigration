@@ -12,8 +12,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stango Immigration | Trusted Global Visa & Immigration Consulting</title>
   <meta name="description" content="Stango Immigration provides expert consultation for work visas, study permits, PR, and tourist visas to Canada, Australia, UK, and Europe.">
-  <link rel="icon" type="image/png" href="resources/logo-transparent.png">
-  <link rel="apple-touch-icon" href="resources/logo-transparent.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="resources/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="resources/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <!-- Meta Pixel Code -->
   <script src="js/meta-pixel.js"></script>
@@ -28,7 +33,7 @@
   <header class="site-header">
     <div class="header-container">
       <a href="index.html" class="brand-link" aria-label="Stango Immigration Home">
-        <img src="resources/logo-transparent.png" alt="Stango Immigration Official Logo" class="brand-logo-img">
+        <img src="resources/logo-icon.png" alt="Stango Immigration Official Logo" class="brand-logo-img">
         <div class="brand-text-wrap">
           <span class="brand-title">Stango Immigration</span>
           <span class="brand-tagline">Visa &amp; Immigration Advisory</span>
@@ -98,9 +103,9 @@
             <div class="form-header">
               <div>
                 <h2 class="form-header-title">Free Eligibility Assessment</h2>
-                <p class="form-header-desc">Complete the quick form below. An expert consultant will contact you.</p>
+                <p class="form-header-desc">Instant evaluation by certified immigration specialists.</p>
               </div>
-              <span class="form-header-badge">✓ Free & Confidential</span>
+              <span class="form-header-badge">✓ Free &amp; Confidential</span>
             </div>
 
             <!-- Feedback Alert -->
@@ -111,6 +116,7 @@
               <input type="hidden" name="_subject" value="New Immigration Assessment Lead - Stango Immigration">
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_captcha" value="false">
+              
               <div class="form-grid">
                 
                 <!-- Full Name -->
@@ -140,83 +146,93 @@
                   </div>
                 </div>
 
-                <!-- Age -->
+                <!-- Visa Category / Preferred Service -->
                 <div class="form-group">
-                  <label for="age" class="form-label">
-                    Age <span class="required">*</span>
-                  </label>
+                  <label for="visaCategory" class="form-label">Visa / Service Type <span class="required">*</span></label>
                   <div class="input-icon-wrap">
                     <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                      <line x1="16" y1="2" x2="16" y2="6"></line>
-                      <line x1="8" y1="2" x2="8" y2="6"></line>
-                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                      <polyline points="2 17 12 22 22 17"></polyline>
+                      <polyline points="2 12 12 17 22 12"></polyline>
                     </svg>
-                    <input type="number" id="age" name="age" class="form-input" min="16" max="99" placeholder="e.g. 26" required>
-                  </div>
-                </div>
-
-                <!-- State (Dropdown) -->
-                <div class="form-group">
-                  <label for="state" class="form-label">
-                    State / Union Territory <span class="required">*</span>
-                  </label>
-                  <div class="input-icon-wrap">
-                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                      <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                    <select id="state" name="state" class="form-select" required>
-                      <option value="" disabled selected>Select your state</option>
-                      <optgroup label="States">
-                        <option value="Andhra Pradesh">Andhra Pradesh</option>
-                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                        <option value="Assam">Assam</option>
-                        <option value="Bihar">Bihar</option>
-                        <option value="Chhattisgarh">Chhattisgarh</option>
-                        <option value="Goa">Goa</option>
-                        <option value="Gujarat">Gujarat</option>
-                        <option value="Haryana">Haryana</option>
-                        <option value="Himachal Pradesh">Himachal Pradesh</option>
-                        <option value="Jharkhand">Jharkhand</option>
-                        <option value="Karnataka">Karnataka</option>
-                        <option value="Kerala">Kerala</option>
-                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                        <option value="Maharashtra">Maharashtra</option>
-                        <option value="Manipur">Manipur</option>
-                        <option value="Meghalaya">Meghalaya</option>
-                        <option value="Mizoram">Mizoram</option>
-                        <option value="Nagaland">Nagaland</option>
-                        <option value="Odisha">Odisha</option>
-                        <option value="Punjab">Punjab</option>
-                        <option value="Rajasthan">Rajasthan</option>
-                        <option value="Sikkim">Sikkim</option>
-                        <option value="Tamil Nadu">Tamil Nadu</option>
-                        <option value="Telangana">Telangana</option>
-                        <option value="Tripura">Tripura</option>
-                        <option value="Uttar Pradesh">Uttar Pradesh</option>
-                        <option value="Uttarakhand">Uttarakhand</option>
-                        <option value="West Bengal">West Bengal</option>
-                      </optgroup>
-                      <optgroup label="Union Territories">
-                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                        <option value="Chandigarh">Chandigarh</option>
-                        <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra &amp; Nagar Haveli and Daman &amp; Diu</option>
-                        <option value="Delhi">Delhi (NCT)</option>
-                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                        <option value="Ladakh">Ladakh</option>
-                        <option value="Lakshadweep">Lakshadweep</option>
-                        <option value="Puducherry">Puducherry</option>
-                      </optgroup>
-                      <optgroup label="Other">
-                        <option value="Other / Outside India">Other / International</option>
-                      </optgroup>
+                    <select id="visaCategory" name="visaCategory" class="form-select" required>
+                      <option value="Tourist and Visitor Visa" selected>Tourist &amp; Visitor Visa</option>
+                      <option value="Canada Open Work Permit">Canada Work Permit (IMP Program)</option>
+                      <option value="Work Visa Assistance">Global Work Visa</option>
+                      <option value="Study Visa">Study Visa &amp; Permit</option>
+                      <option value="Permanent Residency">Permanent Residency (PR)</option>
+                      <option value="General Consultation">General Immigration Consultation</option>
                     </select>
                   </div>
                 </div>
 
-                <!-- Email Address -->
+                <!-- State & Age Compact Row -->
                 <div class="form-group">
+                  <div class="form-compact-row">
+                    <div class="form-subcol-state">
+                      <label for="state" class="form-label">State / UT <span class="required">*</span></label>
+                      <div class="input-icon-wrap">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                          <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <select id="state" name="state" class="form-select" required>
+                          <option value="" disabled selected>Select state</option>
+                          <optgroup label="States">
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                          </optgroup>
+                          <optgroup label="Union Territories">
+                            <option value="Andaman and Nicobar Islands">Andaman &amp; Nicobar</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Dadra and Nagar Haveli and Daman and Diu">D&amp;NH and D&amp;D</option>
+                            <option value="Delhi">Delhi (NCT)</option>
+                            <option value="Jammu and Kashmir">Jammu &amp; Kashmir</option>
+                            <option value="Ladakh">Ladakh</option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Puducherry">Puducherry</option>
+                          </optgroup>
+                          <optgroup label="Other">
+                            <option value="Other / Outside India">Other / International</option>
+                          </optgroup>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-subcol-age">
+                      <label for="age" class="form-label">Age <span class="required">*</span></label>
+                      <input type="number" id="age" name="age" class="form-input form-input-age" min="16" max="99" placeholder="Age" required>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Email Address -->
+                <div class="form-group col-span-2">
                   <label for="email" class="form-label">
                     Email Address <span class="required">*</span>
                   </label>
@@ -229,30 +245,18 @@
                   </div>
                 </div>
 
-                <!-- Visa Category / Preferred Service -->
-                <div class="form-group">
-                  <label for="visaCategory" class="form-label">Visa / Service Type</label>
-                  <div class="input-icon-wrap">
-                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                      <polyline points="2 17 12 22 22 17"></polyline>
-                      <polyline points="2 12 12 17 22 12"></polyline>
+                <!-- Optional Details (Expandable) -->
+                <div class="form-group col-span-2 form-notes-wrapper">
+                  <button type="button" class="btn-notes-toggle" id="notesToggleBtn" onclick="toggleNotesField()">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <line x1="12" y1="5" x2="12" y2="19"></line>
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
                     </svg>
-                    <select id="visaCategory" name="visaCategory" class="form-select">
-                      <option value="Tourist and Visitor Visa">Tourist &amp; Visitor Visa</option>
-                      <option value="Canada Open Work Permit">Canada Work Permit (IMP Program)</option>
-                      <option value="Work Visa Assistance">Global Work Visa</option>
-                      <option value="Study Visa">Study Visa &amp; Permit</option>
-                      <option value="Permanent Residency">Permanent Residency (PR)</option>
-                      <option value="General Consultation">General Immigration Consultation</option>
-                    </select>
+                    <span>Add specific requirements (optional)</span>
+                  </button>
+                  <div id="notesContainer" class="notes-container" style="display:none;">
+                    <textarea id="notes" name="notes" class="form-textarea" placeholder="Tell us about your education, target country, or specific goals..."></textarea>
                   </div>
-                </div>
-
-                <!-- Query / Notes -->
-                <div class="form-group col-span-2">
-                  <label for="notes" class="form-label">Additional Details / Questions (Optional)</label>
-                  <textarea id="notes" name="notes" class="form-textarea" placeholder="Tell us about your education, target country, or specific visa goals..."></textarea>
                 </div>
 
               </div>
@@ -268,8 +272,8 @@
 
               <div class="form-footer-guarantee">
                 <span>🔒 100% Confidential</span>
-                <span>⚡ Quick Response within 24 Hours</span>
-                <span>🛡️ No Hidden Fees</span>
+                <span>⚡ 24hr Assessment</span>
+                <span>🛡️ Certified Advisory</span>
               </div>
             </form>
           </div>
@@ -277,7 +281,7 @@
       </div>
     </section>
 
-    <!-- TRUST STRIP (ESSENTIAL HIGHLIGHTS) -->
+<!-- TRUST STRIP (ESSENTIAL HIGHLIGHTS) -->
     <section class="trust-strip">
       <div class="trust-container">
         <div class="trust-item">
@@ -432,7 +436,7 @@
         <!-- Col 1: Brand Info -->
         <div class="footer-brand">
           <a href="index.html" class="footer-logo-card" aria-label="Stango Immigration Home">
-            <img src="resources/logo.png" alt="Stango Immigration Official Logo">
+            <img src="resources/logo-transparent.png" alt="Stango Immigration Official Logo">
           </a>
           <p class="footer-desc">
             Stango Immigration is dedicated to simplifying international migration through ethical, professional, and personalized visa consulting.
@@ -470,7 +474,7 @@
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
-            <a href="mailto:stango.marketing@gmai.com" style="color:#cbd5e1;">stango.marketing@gmai.com</a>
+            <a href="mailto:stango.marketing@gmail.com" >stango.marketing@gmail.com</a>
           </div>
           <div class="footer-contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
